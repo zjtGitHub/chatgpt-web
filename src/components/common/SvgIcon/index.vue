@@ -17,5 +17,5 @@ const bindAttrs = computed<{ class: string; style: string }>(() => ({
 </script>
 
 <template>
-  <Icon :icon="icon" v-bind="bindAttrs" />
+  <Icon :icon="typeof icon === 'string' ? icon : undefined" v-bind="bindAttrs" />
 </template>
